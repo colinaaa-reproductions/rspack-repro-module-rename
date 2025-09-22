@@ -18,7 +18,6 @@ const config = {
   entry: {
     main: "./src/index",
   },
-  plugins: [new HtmlWebpackPlugin()],
   output: {
     clean: true,
     path: isRunningWebpack
@@ -26,9 +25,7 @@ const config = {
       : path.resolve(__dirname, "rspack-dist"),
     filename: "[name].js",
   },
-  experiments: {
-    css: true,
-  },
+  target: 'node',
 };
 
 export default config;
